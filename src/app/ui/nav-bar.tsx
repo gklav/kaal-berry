@@ -3,23 +3,6 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
-/*
-<div className={`invisible md:visible flex justify-between w-full items-center text-xl p-1 px-2`}>
-                {
-                    links.map((link) => {
-                        return (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                            >
-                                <p className="block">{link.name}</p>
-                            </Link>
-                        );
-                    })
-                }
-            </div>
-
- */
 export default function NavBar() {
     const t = useTranslations('EventPage');
     const eventPageTitle = t('title');

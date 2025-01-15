@@ -1,5 +1,8 @@
 {
   "EventPage": {
-    "title": "Concerts"
+    "title": "Concerts",
+    "noEventsAnnounced": "Aucun évènement annoncé pour l'instant.",
+    "noEventsNearby": "Aucun évènement à proximité ?",
+    "requestAShow": "Proposer un concert"
   }
 }
