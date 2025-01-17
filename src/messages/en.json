@@ -1,5 +1,8 @@
 {
   "EventPage": {
-    "title": "Tour"
+    "title": "Tour",
+    "noEventsAnnounced": "No upcoming events for now.",
+    "noEventsNearby": "No upcoming events near you?",
+    "requestAShow": "Request a show"
   }
 }
