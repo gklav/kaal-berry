@@ -1,9 +1,15 @@
+import Image from 'next/image';
+import bandPic from '../../public/assets/kb-round-300.webp';
+
 export default function Home() {
+
   return (
-      <main className={`relative items-center justify-items-center my-20`}>
-        <div className="p-8 pb-20 gap-16 sm:p-20">
-            <h1 className={`text-3xl md:text-9xl`}>Kaal Berry</h1>
-        </div>
+      <main className={`flex flex-col w-full justify-center items-center mt-40`}>
+          
+          <h1 className={`text-3xl md:hidden`}>Kaal Berry</h1>
+          
+          <Image src={bandPic} alt={`Kaal Berry`} loading={`lazy`} width={300} quality={100} className={`py-10 md:pt-0`} />
+
       </main>
   );
 }

@@ -5,7 +5,7 @@ export default getRequestConfig(async () => {
     const headersList = await headers();
     const defaultLocale = headersList.get("accept-language") || 'fr';
     const localeRaw = (await cookies()).get("NEXT_LOCALE")?.value || defaultLocale || "en";
-    const locale = localeRaw.split("-")[0];
+    const locale = localeRaw.split("-")[0].split(",")[0];
 
     return {
         locale,

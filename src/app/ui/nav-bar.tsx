@@ -74,7 +74,7 @@ export default function NavBar() {
     };
 
     return (
-        <nav className={`flex w-full`}>
+        <nav className={`flex w-screen`}>
             <div
                 className={`md:hidden fixed h-screen z-10 duration-1000 ${isOpen ? `right-full` : `right-0`} ease-in-out`}>
                 <div className={`fixed h-screen w-screen z-10 bg-red p-2`}>
@@ -138,7 +138,7 @@ export default function NavBar() {
 
                 </div>
             </div>
-            <div className={`md:hidden fixed right-0 z-10 p-2`}>
+            <div className={`md:hidden w-screen absolute flex justify-end z-10 p-2`}>
                 <div onClick={handleClick}>
                     <svg version="1.2" className="fill-white" role="presentation" viewBox="0 0 200 170" width="30">
                         <path id="s01" className="s0" d="m0 155.5h200v15h-200z"/>
@@ -147,13 +147,14 @@ export default function NavBar() {
                     </svg>
                 </div>
             </div>
-            <div className={`hidden md:flex justify-between w-screen items-center text-xl p-1 px-2`}>
+            <div className={`hidden md:grid grid-cols-${links.length} flex-col w-screen justify-items-center text-xl p-1 px-2`}>
                 {
                     links.map((link) => {
                         return (
                             <Link
                                 key={link.name}
                                 href={link.href}
+                                className={`block text-align-center`}
                             >
                                 <p className="block">{link.name}</p>
                             </Link>
@@ -164,3 +165,11 @@ export default function NavBar() {
         </nav>
     );
 }
+
+/*
+<svg version="1.2" className="fill-white" role="presentation" viewBox="0 0 200 170" width="30">
+                        <path id="s01" className="s0" d="m0 155.5h200v15h-200z"/>
+                        <path id="s02" className="s0" d="m0 77.5h200v15h-200z"/>
+                        <path id="s03" className="s0" d="m0-0.5h200v15h-200z"/>
+                    </svg>
+ */

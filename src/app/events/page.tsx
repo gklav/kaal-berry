@@ -18,16 +18,25 @@ export default async function Page() {
 
     return (
         <>
-            <main className={`md:w-full relative justify-center justify-items-center`}>
-                <div className="w-10/12 md:w-7/12 py-20">
-                    {
-                        events.map((event) => {
-                            return <EventRow event={event} key={event.id}/>
-                        })
-                    }
-                </div>
-                <div className={`w-full justify-items-center text-center break-before-column`}>
-                    <p className={`text-xs`}>{callToActionContext} <br className={`md:hidden`} /><Link href='/#' className={`text-black hover:text-red border-b border-black hover:border-red`}>{callToAction}</Link></p>
+            <main className={`md:w-full justify-center justify-items-center`}>
+                <div className="w-full h-screen justify-items-center pt-5">
+                    <h2 className={`text-center text-4xl`}>Concerts</h2>
+                    <div className="w-10/12 md:w-7/12 py-10">
+                        {
+                            events.map((event) => {
+                                return <EventRow event={event} key={event.id}/>
+                            })
+                        }
+                    </div>
+                    <div className={`grid w-full justify-items-center text-center break-before-column`}>
+                        <p className={`text-xs`}>{callToActionContext} <br className={`md:hidden`}/>
+                            <Link
+                                href='/#'
+                                className={`text-teal hover:text-red border-b border-black hover:border-red`}>
+                                    {callToAction}
+                            </Link>
+                        </p>
+                    </div>
                 </div>
             </main>
         </>
