@@ -9,15 +9,15 @@ export default {
   theme: {
     extend: {
       colors: {
+        teal: 'var(--color-teal)',
+        orange: 'var(--color-orange)',
+        red: 'var(--color-red)',
+        black: 'var(--color-black)',
+        white: 'var(--color-white)',
         background: "var(--background)",
         foreground: "var(--foreground)",
-        teal: "#00deb3",
-        orange: "#F2780C",
-        red: "#F21313",
-        black: "#2F1E0E",
-        white: "#fafae8",
       },
+      plugins: [],
     },
   },
-  plugins: [],
 } satisfies Config;
