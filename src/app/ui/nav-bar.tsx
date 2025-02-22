@@ -147,7 +147,7 @@ export default function NavBar() {
                     </svg>
                 </div>
             </div>
-            <div className={`hidden w-screen md:flex justify-items-center justify-between text-xl p-1 px-2`}>
+            <div className={`hidden md:grid grid-cols-${links.length} flex-col w-screen justify-items-center text-xl p-1 px-2`}>
                 {
                     links.map((link) => {
                         return (
