@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import bandPic from '../../public/assets/kb-round-300.webp';
+import bandPic from '../../public/assets/kb-round.webp';
 
 export default function Home() {
 
@@ -8,7 +8,7 @@ export default function Home() {
           
           <h1 className={`text-3xl md:hidden`}>Kaal Berry</h1>
           
-          <Image src={bandPic} alt={`Kaal Berry`} loading={`lazy`} width={300} quality={100} className={`py-10 md:pt-0`} />
+          <Image src={bandPic} alt={`Kaal Berry`} loading={`lazy`} quality={100} className={`py-10 md:pt-0 w-[300px]`} />
 
       </main>
   );
