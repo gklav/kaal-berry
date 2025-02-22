@@ -165,11 +165,3 @@ export default function NavBar() {
         </nav>
     );
 }
-
-/*
-<svg version="1.2" className="fill-white" role="presentation" viewBox="0 0 200 170" width="30">
-                        <path id="s01" className="s0" d="m0 155.5h200v15h-200z"/>
-                        <path id="s02" className="s0" d="m0 77.5h200v15h-200z"/>
-                        <path id="s03" className="s0" d="m0-0.5h200v15h-200z"/>
-                    </svg>
- */
