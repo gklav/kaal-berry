@@ -1,3 +1,5 @@
+'use server'
+
 import { getEvents } from '@/app/lib/data';
 import { EventRow } from '@/app/ui/event-row';
 import { getTranslations } from 'next-intl/server';

@@ -1,7 +1,9 @@
+'use server'
+
 import { BandsInTownEvent, Event } from '@/app/lib/types';
 
 export async function getEvents(): Promise < Event[] > {
-    const appId = process.env.BANDSINTOWN_APP_ID;
+    const appId = process.env.EVENTS_APP_ID;
     const response = await fetch(`https://rest.bandsintown.com/artists/id_15513188/events/?date=upcoming&app_id=${appId}`);
 
     if (!response.ok) {

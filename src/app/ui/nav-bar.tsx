@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import NewsletterForm from '@/app/ui/newsletter-form';
 
 export default function NavBar() {
     const t = useTranslations('EventPage');
@@ -88,7 +89,7 @@ export default function NavBar() {
                             KAAL BERRY
                         </Link>
                     </div>
-                    <div className={`h-3/5 text-2xl`}>
+                    <div className={`h-1/5 text-2xl`}>
                         {
                             links.map((link) => {
                                 return link.type === 'page'
@@ -104,6 +105,9 @@ export default function NavBar() {
                                     : '';
                             })
                         }
+                    </div>
+                    <div className={`h-1/5`}>
+                        <NewsletterForm />
                     </div>
                     <div className={`h-1/5 w-full grid grid-cols-2 text-s`}>
                         <div>
