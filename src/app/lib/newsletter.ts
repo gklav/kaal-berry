@@ -5,7 +5,7 @@ export async function newsletterSubscribe(email: string): Promise<boolean> {
     const listIdsString = process.env.NEWSLETTER_LIST_IDS as string;
     const listIds = listIdsString.split(',').map(id => parseInt(id, 10));
 
-    if (!email || !email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)) {
+    if (!email || !email.match(/^[\w-\.+]+@([\w-]+\.)+[\w-]{2,4}$/g)) {
         return false;
     }
 
