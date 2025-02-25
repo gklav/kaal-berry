@@ -144,10 +144,16 @@ export default function NavBar() {
             </div>
             <div className={`md:hidden w-screen absolute flex justify-end z-10 p-2`}>
                 <div onClick={handleClick}>
-                    <svg version="1.2" className="fill-white" role="presentation" viewBox="0 0 200 170" width="30">
+                    <svg version="1.2" viewBox="0 0 200 170" width="30"
+                         className={`${isOpen ? `hidden` : `block`} fill-white`}>
                         <path id="s01" className="s0" d="m0 155.5h200v15h-200z"/>
                         <path id="s02" className="s0" d="m0 77.5h200v15h-200z"/>
                         <path id="s03" className="s0" d="m0-0.5h200v15h-200z"/>
+                    </svg>
+                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="30"
+                         className={`${isOpen ? `block` : `hidden`} fill-white`}>
+                        <path id="s04" className="s0" d="m200 186l-14 14-186-186 14-14z"/>
+                        <path id="s05" className="s0" d="m14 200l-14-14 186-186 14 14z"/>
                     </svg>
                 </div>
             </div>
