@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import bandPic from '../../public/assets/kb-round.webp';
+import NewsletterForm from '@/app/ui/newsletter-form';
 
 export default function Home() {
 
@@ -46,6 +47,7 @@ export default function Home() {
                 </a>
             </div>
 
+            <NewsletterForm />
         </main>
     );
 }
