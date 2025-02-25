@@ -29,7 +29,7 @@ export default function NewsletterForm() {
     return (
         <>
             <div className={`px-6 py-10`}>
-                <h3>{t('title')}</h3>
+                <p>{t('title')}</p>
                 <Form action={handleSubmit} className={`${submission ? `hidden` : `flex`}`}>
                     <div className={`flex rounded-full`}>
                         <input
