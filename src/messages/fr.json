@@ -4,5 +4,12 @@
     "noEventsAnnounced": "Aucun évènement annoncé pour l'instant.",
     "noEventsNearby": "Aucun évènement à proximité ?",
     "requestAShow": "Proposer un concert"
+  },
+  "Newsletter": {
+    "title": "Newsletter",
+    "submission": "S'inscrire",
+    "placeholder": "Ton email...",
+    "thanks": "Merci pour ton inscription !",
+    "error": "Erreur lors de l'inscription. Merci de réessayer plus tard."
   }
 }
