@@ -29,42 +29,19 @@ export default function NavBar() {
     const socials = [
         {
             name: 'Instagram',
-            href: '#',
+            href: 'https://www.instagram.com/kaalberry',
         },
         {
             name: 'YouTube',
-            href: '#',
+            href: 'https://www.youtube.com/@kaalberry',
         },
         {
             name: 'Facebook',
-            href: '#',
+            href: 'https://www.facebook.com/kaalberry',
         },
         {
             name: 'TikTok',
-            href: '#',
-        }
-    ];
-
-    const streamingServices = [
-        {
-            name: 'Spotify',
-            href: '#',
-        },
-        {
-            name: 'Deezer',
-            href: '#',
-        },
-        {
-            name: 'Apple Music',
-            href: '#',
-        },
-        {
-            name: 'Amazon Music',
-            href: '#',
-        },
-        {
-            name: 'Youtube Music',
-            href: '#',
+            href: 'https://www.tiktok.com/@kaalberry',
         }
     ];
 
@@ -119,20 +96,6 @@ export default function NavBar() {
                                             href={social.href}
                                         >
                                             <p className="block">{social.name}</p>
-                                        </Link>
-                                    );
-                                })
-                            }
-                        </div>
-                        <div>
-                            {
-                                streamingServices.map((streaming) => {
-                                    return (
-                                        <Link
-                                            key={streaming.name}
-                                            href={streaming.href}
-                                        >
-                                            <p className="block">{streaming.name}</p>
                                         </Link>
                                     );
                                 })
