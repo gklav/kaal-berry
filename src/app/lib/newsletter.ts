@@ -1,6 +1,7 @@
 'use server'
 
 export async function newsletterSubscribe(email: string): Promise<boolean> {
+    const url = process.env.NEWSLETTER_API_URL as string;
     const apiKey = process.env.NEWSLETTER_API_KEY as string;
     const listIdsString = process.env.NEWSLETTER_LIST_IDS as string;
     const listIds = listIdsString.split(',').map(id => parseInt(id, 10));
@@ -9,7 +10,6 @@ export async function newsletterSubscribe(email: string): Promise<boolean> {
         return false;
     }
 
-    const url = 'https://api.brevo.com/v3/contacts';
     const options = {
         method: 'POST',
         headers: {

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /kb-art.txt
+
+User-agent: *
+Allow: /

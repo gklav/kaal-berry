@@ -3,6 +3,7 @@
 import { getEvents } from '@/app/lib/data';
 import { EventRow } from '@/app/ui/event-row';
 import { getTranslations } from 'next-intl/server';
+import Head from 'next/head';
 
 export default async function Page() {
     const events = await getEvents();
@@ -19,6 +20,9 @@ export default async function Page() {
 
     return (
         <>
+            <Head>
+                <title>{t('title')}</title>
+            </Head>
             <main className={`md:w-full justify-center justify-items-center`}>
                 <div className="w-full h-screen justify-items-center pt-5">
                     <h1 className={`text-center text-4xl`}>Concerts</h1>
@@ -34,7 +38,7 @@ export default async function Page() {
                             <a
                                 href={`mailto:kaalberry@gmail.com`}
                                 className={`text-teal hover:text-red border-b border-black hover:border-red`}>
-                                    {callToAction}
+                                {callToAction}
                             </a>
                         </p>
                     </div>
