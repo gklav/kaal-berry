@@ -2,16 +2,17 @@ import type { Metadata } from "next";
 import localFont from 'next/font/local'
 import "./ui/globals.css";
 import NavBar from '@/app/ui/nav-bar';
-import {NextIntlClientProvider} from 'next-intl';
-import {getLocale, getMessages} from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages } from 'next-intl/server';
 import React from 'react';
 import Footer from '@/app/ui/footer';
 
 const horizon = localFont({ src: '../../public/fonts/horizon.otf' });
 
 export const metadata: Metadata = {
-  title: "Kaal Berry",
-  description: "Site officiel. Musique, concerts, et plus.",
+    title: 'Kaal Berry',
+    description: 'Kaal Berry is an indie alt-rock band from Bordeaux, France.',
+    keywords: 'Kaal Berry, Bordeaux, France, pop, rock, alt, alternative, music, static',
 };
 
 export default async function RootLayout({

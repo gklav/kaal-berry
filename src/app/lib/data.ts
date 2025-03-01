@@ -1,8 +1,14 @@
+'use server'
+
 import { BandsInTownEvent, Event } from '@/app/lib/types';
 
 export async function getEvents(): Promise < Event[] > {
-    const appId = process.env.BANDSINTOWN_APP_ID;
-    const response = await fetch(`https://rest.bandsintown.com/artists/id_15513188/events/?date=upcoming&app_id=${appId}`);
+    const appId = process.env.EVENTS_APP_ID as string;
+    const url = process.env.EVENTS_API_URL as string;
+    const response = await fetch(
+        `${url}/?app_id=${appId}`,
+        { next: { revalidate: 3600 }}
+    );
 
     if (!response.ok) {
         throw new Error('Failed to fetch events');

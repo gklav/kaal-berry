@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import NewsletterForm from '@/app/ui/newsletter-form';
 
 export default function NavBar() {
     const t = useTranslations('EventPage');
@@ -20,7 +21,7 @@ export default function NavBar() {
         },
         {
             name: 'Contact',
-            href: '#',
+            href: '/contact',
             type: 'page',
         }
     ];
@@ -28,42 +29,19 @@ export default function NavBar() {
     const socials = [
         {
             name: 'Instagram',
-            href: '#',
+            href: 'https://www.instagram.com/kaalberry',
         },
         {
             name: 'YouTube',
-            href: '#',
+            href: 'https://www.youtube.com/@kaalberry',
         },
         {
             name: 'Facebook',
-            href: '#',
+            href: 'https://www.facebook.com/kaalberry',
         },
         {
             name: 'TikTok',
-            href: '#',
-        }
-    ];
-
-    const streamingServices = [
-        {
-            name: 'Spotify',
-            href: '#',
-        },
-        {
-            name: 'Deezer',
-            href: '#',
-        },
-        {
-            name: 'Apple Music',
-            href: '#',
-        },
-        {
-            name: 'Amazon Music',
-            href: '#',
-        },
-        {
-            name: 'Youtube Music',
-            href: '#',
+            href: 'https://www.tiktok.com/@kaalberry',
         }
     ];
 
@@ -88,7 +66,7 @@ export default function NavBar() {
                             KAAL BERRY
                         </Link>
                     </div>
-                    <div className={`h-3/5 text-2xl`}>
+                    <div className={`h-1/5 text-2xl`}>
                         {
                             links.map((link) => {
                                 return link.type === 'page'
@@ -105,6 +83,9 @@ export default function NavBar() {
                             })
                         }
                     </div>
+                    <div className={`h-1/5`}>
+                        <NewsletterForm />
+                    </div>
                     <div className={`h-1/5 w-full grid grid-cols-2 text-s`}>
                         <div>
                             {
@@ -120,34 +101,26 @@ export default function NavBar() {
                                 })
                             }
                         </div>
-                        <div>
-                            {
-                                streamingServices.map((streaming) => {
-                                    return (
-                                        <Link
-                                            key={streaming.name}
-                                            href={streaming.href}
-                                        >
-                                            <p className="block">{streaming.name}</p>
-                                        </Link>
-                                    );
-                                })
-                            }
-                        </div>
                     </div>
 
                 </div>
             </div>
             <div className={`md:hidden w-screen absolute flex justify-end z-10 p-2`}>
                 <div onClick={handleClick}>
-                    <svg version="1.2" className="fill-white" role="presentation" viewBox="0 0 200 170" width="30">
+                    <svg version="1.2" viewBox="0 0 200 170" width="30"
+                         className={`${isOpen ? `hidden` : `block`} fill-white`}>
                         <path id="s01" className="s0" d="m0 155.5h200v15h-200z"/>
                         <path id="s02" className="s0" d="m0 77.5h200v15h-200z"/>
                         <path id="s03" className="s0" d="m0-0.5h200v15h-200z"/>
                     </svg>
+                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="30"
+                         className={`${isOpen ? `block` : `hidden`} fill-white`}>
+                        <path id="s04" className="s0" d="m200 186l-14 14-186-186 14-14z"/>
+                        <path id="s05" className="s0" d="m14 200l-14-14 186-186 14 14z"/>
+                    </svg>
                 </div>
             </div>
-            <div className={`hidden md:grid grid-cols-${links.length} flex-col w-screen justify-items-center text-xl p-1 px-2`}>
+            <div className={`hidden md:flex w-screen justify-items-center justify-between text-xl p-1 px-2`}>
                 {
                     links.map((link) => {
                         return (
@@ -165,11 +138,3 @@ export default function NavBar() {
         </nav>
     );
 }
-
-/*
-<svg version="1.2" className="fill-white" role="presentation" viewBox="0 0 200 170" width="30">
-                        <path id="s01" className="s0" d="m0 155.5h200v15h-200z"/>
-                        <path id="s02" className="s0" d="m0 77.5h200v15h-200z"/>
-                        <path id="s03" className="s0" d="m0-0.5h200v15h-200z"/>
-                    </svg>
- */

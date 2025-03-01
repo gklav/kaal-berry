@@ -4,5 +4,12 @@
     "noEventsAnnounced": "No upcoming events for now.",
     "noEventsNearby": "No upcoming events near you?",
     "requestAShow": "Request a show"
+  },
+  "Newsletter": {
+    "title": "Newsletter",
+    "submission": "join",
+    "placeholder": "Your email...",
+    "thanks": "Thanks for joining!",
+    "error": "Error while subscribing. Please try again later."
   }
 }
